@@ -65,3 +65,11 @@ body {
     grid-template-rows: repeat(2, 1fr);
   }
 }
+/* Icon */
+.icon {
+  height: 20px;
+  width: 20px;
+}
+.icon--white {
+  fill: #fff;
+}
