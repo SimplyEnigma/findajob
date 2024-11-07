@@ -8,6 +8,7 @@
   --color-primary: linear-gradient(90deg, #3dd9d1, #045597);
   --color-secondary: #045597;
   --color-accent: #353535;
+  --radius-border: 4px;
 }
 
 html {
@@ -15,7 +16,10 @@ html {
 }
 
 body {
-  background-color: var(--color-accent); /*This is a testing point*/
+  /*This is a testing point*/
+  background-color: var(--color-accent);
+  padding: 3rem;
+  /*This is a testing point*/
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 2rem;
   letter-spacing: 1px;
@@ -77,15 +81,20 @@ body {
 .icon--white {
   fill: #fff;
 }
+@media screen and (max-width: 468px) {
+  .icon {
+    height: 15px;
+    width: 15px;
+  }
+}
 /* Button */
 .btn {
-  border-radius: 4px;
+  border-radius: var(--radius-border);
   border: none;
   cursor: pointer;
   font-weight: 300;
   letter-spacing: 2px;
-  overflow: hidden;
-  padding: 0.8rem 2.4rem 0.8rem 1rem;
+  padding: 0.8rem 1.6vw;
   white-space: nowrap;
 }
 .btn--secondary {
@@ -98,5 +107,41 @@ body {
 }
 .btn .icon {
   transform: translateY(2px);
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+/* input */
+.input {
+  margin-top: 1rem; /*This is a Test*/
+  background-color: #f2f2f2;
+  border-radius: var(--radius-border);
+  display: flex;
+}
+.input--field {
+  box-shadow: 0 0 4px 2px #ccc;
+}
+::placeholder {
+  opacity: 0.4;
+  text-transform: capitalize;
+}
+.input__box {
+  background-color: transparent;
+  border: none;
+  flex-grow: 1;
+  margin-left: 1rem;
+  outline: none;
+  width: 0;
+}
+.input .btn {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 468px) {
+  .input__box {
+    font-size: 1.5rem;
+  }
 }
 /*  */
