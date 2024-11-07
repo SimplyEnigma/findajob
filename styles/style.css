@@ -1,5 +1,9 @@
 /* Typography */
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root {
   --color-primary: linear-gradient(90deg, #3dd9d1, #045597);
   --color-secondary: #045597;
@@ -14,8 +18,8 @@ body {
   background-color: var(--color-accent); /*This is a testing point*/
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 2rem;
-  line-height: 1.5;
   letter-spacing: 1px;
+  line-height: 1.5;
 }
 .container {
   max-width: 1140px;
@@ -27,8 +31,8 @@ body {
 }
 .list a {
   color: #fff;
-  text-decoration: none;
   font-weight: 300;
+  text-decoration: none;
   transition: color 0.3s;
 }
 .list a:hover {
@@ -42,9 +46,9 @@ body {
   line-height: 1.6;
 }
 .list--block .list__itemPoints {
+  font-weight: 500;
   line-height: 1.6;
   list-style-type: disc;
-  font-weight: 500;
 }
 @media screen and (max-width: 468px) {
   .list {
@@ -73,3 +77,26 @@ body {
 .icon--white {
   fill: #fff;
 }
+/* Button */
+.btn {
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 2px;
+  overflow: hidden;
+  padding: 0.8rem 2.4rem 0.8rem 1rem;
+  white-space: nowrap;
+}
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+  transition: background-color 0.3s;
+}
+.btn--secondary:hover {
+  background-color: #023f72;
+}
+.btn .icon {
+  transform: translateY(2px);
+}
+/*  */
