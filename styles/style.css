@@ -1,0 +1,53 @@
+/* Typography */
+
+:root {
+  --color-primary: linear-gradient(90deg, #3dd9d1, #045597);
+  --color-secondary: #045597;
+  --color-accent: #353535;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-accent); /*This is a testing point*/
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.container {
+  max-width: 1140px;
+}
+/* List */
+.list {
+  padding-left: 0;
+  list-style-type: none;
+}
+.list a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+.list a:hover {
+  color: #c7c7c7;
+}
+.list--inline .list__item {
+  display: inline;
+  margin-right: 3rem;
+}
+.list--block .list__item {
+  line-height: 1.6;
+}
+.list--block .list__itemPoints {
+  line-height: 1.6;
+  list-style-type: disc;
+  font-weight: 500;
+}
+@media screen and (max-width: 468px) {
+  .list {
+    font-size: 1.5rem;
+  }
+}
