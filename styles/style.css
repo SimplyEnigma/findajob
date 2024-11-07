@@ -51,3 +51,17 @@ body {
     font-size: 1.5rem;
   }
 }
+/* Grid */
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 469px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 468px) {
+  .grid--1x2 {
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
