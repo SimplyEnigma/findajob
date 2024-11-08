@@ -17,7 +17,8 @@ html {
 
 body {
   /*This is a testing point*/
-  background-color: var(--color-accent);
+  /* background-color: var(--color-accent); */
+  /* background-color: blue; */
   padding: 3rem;
   /*This is a testing point*/
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -63,16 +64,14 @@ body {
 .grid {
   display: grid;
 }
-@media screen and (min-width: 469px) {
+.grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+/* @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-@media screen and (max-width: 468px) {
-  .grid--1x2 {
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
+} */
 /* Icon */
 .icon {
   height: 20px;
@@ -144,4 +143,24 @@ body {
     font-size: 1.5rem;
   }
 }
-/*  */
+/* Parnter Stack */
+.partner {
+  background-color: var(--color-accent);
+  border-radius: var(--radius-border);
+  color: #fff;
+}
+.partner .grid {
+  justify-items: center;
+}
+.partner article {
+  padding: 0.5rem;
+}
+/* .partner .grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+} */
+
+@media screen and (min-width: 768px) {
+  .partner .grid--1x2 {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
