@@ -9,7 +9,6 @@
   --color-secondary: #045597;
   --color-accent: #353535;
   --radius-border: 4px;
-  /* --shadow-box: 0 0 4px 2px #ccc; */
   --shadow-box: 0 0 14px 2px #494949;
 }
 
@@ -18,11 +17,6 @@ html {
 }
 
 body {
-  /*This is a testing point*/
-  /* background-color: var(--color-accent); */
-  /* background-color: blue; */
-  /* padding: 3rem; */
-  /*This is a testing point*/
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -67,9 +61,6 @@ body {
 .grid {
   display: grid;
 }
-/* .grid--1x2 {
-  grid-template-columns: repeat(2, 1fr);
-} */
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
