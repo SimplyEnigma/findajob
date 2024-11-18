@@ -301,3 +301,29 @@ body {
   max-height: 100vh;
   opacity: 1;
 }
+/* Navbar */
+.nav {
+  background-color: #023f72;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+.nav__item {
+  margin: 1rem 2rem 1rem 3rem;
+}
+@media screen and (min-width: 768px) {
+  .nav .collapsible--icon {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    max-height: 100vh;
+    opacity: 1;
+    width: auto;
+  }
+}
+/*  */
