@@ -9,7 +9,8 @@
   --color-secondary: #045597;
   --color-accent: #353535;
   --radius-border: 4px;
-  --shadow-box: 0 0 4px 2px #ccc;
+  /* --shadow-box: 0 0 4px 2px #ccc; */
+  --shadow-box: 0 0 14px 2px #494949;
 }
 
 html {
@@ -29,6 +30,7 @@ body {
 }
 .container {
   max-width: 1140px;
+  margin: auto;
 }
 /* List */
 .list {
@@ -119,10 +121,13 @@ body {
 }
 /* input */
 .input {
-  margin-top: 1rem; /*This is a Test*/
   background-color: #f2f2f2;
   border-radius: var(--radius-border);
   display: flex;
+}
+
+.input__heading {
+  text-transform: capitalize;
 }
 .input--field {
   box-shadow: var(--shadow-box);
@@ -153,23 +158,37 @@ body {
   background-color: var(--color-accent);
   color: #fff;
 }
-/* Parnter Stack */
+/* Partner Stack */
 .partner {
+  margin-top: 5rem;
+}
+.partner__heading {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.partner__content {
   border-radius: var(--radius-border);
 }
-.partner .grid {
+.partner__content .grid {
   justify-items: center;
 }
-.partner article {
+.partner__content article {
   padding: 0.5rem;
 }
-.partner .grid--1x2 {
+.partner__content .grid--1x2 {
   grid-template-columns: repeat(2, 1fr);
 }
 
 @media screen and (min-width: 768px) {
-  .partner .grid--1x2 {
+  .partner__content .grid--1x2 {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+@media screen and (max-width: 1140px) {
+  .partner {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
 /* Callout */
@@ -177,6 +196,8 @@ body {
   text-transform: capitalize;
   padding: 2rem;
   text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 14rem;
 }
 .callout img {
   width: 100%;
@@ -216,6 +237,8 @@ body {
   border-radius: var(--radius-border);
   box-shadow: var(--shadow-box);
   overflow: hidden;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .work__imageGradient {
@@ -275,16 +298,30 @@ body {
     line-height: 2.2;
   }
 }
+@media screen and (max-width: 1140px) {
+  .work {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 4rem;
+  }
+}
 /* Collapsible */
-/* .collapsible {
-  background-color: #023f72;
-} */
+.collapsible {
+  box-shadow: 0 0 14px 2px #0e0e0e;
+}
+.collapsible .list__item {
+  border-bottom: 1px solid #646464;
+}
 .collapsible__header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #181818;
 }
 .collapsible__heading {
   margin: 0;
+  font-size: 2.4rem;
+  padding-left: 2rem;
+  font-weight: 400;
 }
 .collapsible--icon {
   cursor: pointer;
@@ -301,9 +338,11 @@ body {
   max-height: 100vh;
   opacity: 1;
 }
+
 /* Navbar */
 .nav {
-  background-color: #023f72;
+  background-image: var(--color-primary);
+  /* box-shadow: 0 3px 14px 2px #ccc; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -314,10 +353,14 @@ body {
 }
 .nav__item {
   margin: 1rem 2rem 1rem 3rem;
+  border-bottom: 1px solid #cecece;
 }
 @media screen and (min-width: 768px) {
   .nav .collapsible--icon {
     display: none;
+  }
+  .nav__item {
+    border: none;
   }
   .nav__list {
     display: flex;
@@ -326,4 +369,64 @@ body {
     width: auto;
   }
 }
-/*  */
+/* Hero */
+.hero {
+  background-image: var(--color-primary);
+}
+.hero__heading {
+  text-transform: capitalize;
+  font-weight: 500;
+  text-shadow: 3px 3px 10px #494949;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 18rem;
+}
+.hero .input {
+  transform: translateY(20px);
+}
+@media screen and (max-width: 1140px) {
+  .hero .input {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .hero__heading {
+    margin-left: 3rem;
+  }
+}
+/* Footer */
+.footer {
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 6rem 2rem;
+}
+.footer .collapsible {
+  box-shadow: 0 0 14px 2px #0e0e0e;
+}
+.footer .list__item {
+  margin-left: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .collapsible {
+    box-shadow: none;
+  }
+  .footer .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+  }
+  .footer .list__item {
+    border: none;
+  }
+  .footer .icon--big {
+    display: none;
+  }
+  .footer .collapsible__header {
+    border: none;
+  }
+  .footer .list {
+    margin-top: 0;
+  }
+}
