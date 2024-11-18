@@ -342,10 +342,13 @@ body {
 /* Navbar */
 .nav {
   background-image: var(--color-primary);
-  /* box-shadow: 0 3px 14px 2px #ccc; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
 }
 .nav__list {
   width: 100%;
@@ -379,6 +382,7 @@ body {
   text-shadow: 3px 3px 10px #494949;
   color: #fff;
   margin-top: 0;
+  padding-top: 12rem;
   margin-bottom: 18rem;
 }
 .hero .input {
